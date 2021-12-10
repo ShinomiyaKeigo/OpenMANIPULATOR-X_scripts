@@ -80,13 +80,13 @@ if __name__ == '__main__':
     pose_target.position.x =  0.12594757969107834
     pose_target.position.y =  0.06501309219622559
     pose_target.position.z =  0.2436765529398073
-    pose_target.orientation.x = 0.0011796973119297986 # 姿勢(クオータニオン)
-    pose_target.orientation.y =  -0.004448148067920811  # 姿勢(クオータニオン)
-    pose_target.orientation.z = 0.25634598727499985  # 姿勢(クオータニオン)
-    pose_target.orientation.w =  0.9665741343016705  # 姿勢(クオータニオン)  
+    pose_target.orientation.x = 0.0011796973119297986 
+    pose_target.orientation.y =  -0.004448148067920811
+    pose_target.orientation.z = 0.25634598727499985  
+    pose_target.orientation.w =  0.9665741343016705  
     group.set_joint_value_target(pose_target,True)
     group.go()    
-    rospy.sleep(0.2) # 0.1秒のスリープ
+    rospy.sleep(0.2)
     pose_current = group.get_current_pose()
     rospy.loginfo( "Get Current Pose:\n{}\n".format( pose_current ) )      
     
@@ -96,13 +96,13 @@ if __name__ == '__main__':
     pose_target.position.x =  0.2984740895418314
     pose_target.position.y =  0.18264144141042132
     pose_target.position.z =  0.0541949815927592
-    pose_target.orientation.x = -0.0019327509684683615  # 姿勢(クオータニオン)
-    pose_target.orientation.y =  0.006626763674297406  # 姿勢(クオータニオン)
-    pose_target.orientation.z =  0.2799859723362082  # 姿勢(クオータニオン)
-    pose_target.orientation.w =  0.9599792736157625  # 姿勢(クオータニオン)  
+    pose_target.orientation.x = -0.0019327509684683615 
+    pose_target.orientation.y =  0.006626763674297406  
+    pose_target.orientation.z =  0.2799859723362082  
+    pose_target.orientation.w =  0.9599792736157625  
     group.set_joint_value_target(pose_target,True)
     group.go()    
-    rospy.sleep(0.2) # 0.1秒のスリープ
+    rospy.sleep(0.1) # 0.1秒のスリープ
     close_gripper()
     pose_current = group.get_current_pose()
     rospy.loginfo( "Get Current Pose:\n{}\n".format( pose_current ) ) 
@@ -128,7 +128,7 @@ if __name__ == '__main__':
     pose_target.orientation.w =  0.9591383378583592
     group.set_joint_value_target(pose_target,True)
     group.go()    
-    rospy.sleep(0.2) # 0.1秒のスリープ
+    rospy.sleep(0.1) # 0.1秒のスリープ
     pose_current = group.get_current_pose()
     rospy.loginfo( "Get Current Pose:\n{}\n".format( pose_current ) )    
 
@@ -143,12 +143,12 @@ if __name__ == '__main__':
     pose_target.orientation.w =   0.9591104085612159
     group.set_joint_value_target(pose_target,True)
     group.go()    
-    rospy.sleep(0.2) # 0.1秒のスリープ
+    rospy.sleep(0.1) # 0.1秒のスリープ
     pose_current = group.get_current_pose()
     rospy.loginfo( "Get Current Pose:\n{}\n".format( pose_current ) )      
     
     # second edge
-    rospy.loginfo( "first edge")
+    rospy.loginfo( "second edge")
     pose_target.position.x =  0.24536064147045683
     pose_target.position.y =  0.033884418566354005
     pose_target.position.z =  0.039413064345058306
@@ -158,7 +158,7 @@ if __name__ == '__main__':
     pose_target.orientation.w = 0.9969559427358855
     group.set_joint_value_target(pose_target,True)
     group.go()    
-    rospy.sleep(0.2) # 0.1秒のスリープ
+    rospy.sleep(0.1) # 0.1秒のスリープ
     pose_current = group.get_current_pose()
     rospy.loginfo( "Get Current Pose:\n{}\n".format( pose_current ) )  
     
