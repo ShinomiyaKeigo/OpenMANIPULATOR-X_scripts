@@ -59,9 +59,6 @@ if __name__ == '__main__':
     # グリッパの初期値を取得
     gripper_joint_angle = gripper_group.get_current_joint_values()
     print("Get Current Gripper angle:\n{}\n".format(gripper_joint_angle))    
-
-    open_gripper()
     
-    rospy.sleep(0.1)
     pose_current = group.get_current_pose()
     rospy.loginfo( "Get Current Pose:\n{}\n".format( pose_current ) )
